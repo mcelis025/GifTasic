@@ -44,3 +44,11 @@ function renderButtons() {
         $("#buttons-view").append(a);
     }
 }
+
+$("#addGif").on("click", function (event) {
+    event.preventDefault();
+    var gifImg = $("#gifInput").val().trim();
+    gifs.push(gifImg);
+
+    renderButtons();
+});
