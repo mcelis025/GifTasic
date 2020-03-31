@@ -52,3 +52,5 @@ $("#addGif").on("click", function (event) {
 
     renderButtons();
 });
+
+renderButtons();
