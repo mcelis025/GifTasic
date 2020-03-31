@@ -32,3 +32,15 @@ $(document).on("click", ".gifImg", function () {
         }
     });
 });
+
+function renderButtons() {
+
+    $("#buttons-view").empty();
+    for (var i = 0; i < gifs.length; i++) {
+        var a = $("<button>");
+        a.addClass("gifImg");
+        a.attr("data-name", gifs[i]);
+        a.text(gifs[i]);
+        $("#buttons-view").append(a);
+    }
+}
