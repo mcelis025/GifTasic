@@ -1,0 +1,7 @@
+.jumbotron {
+    font-size: 90px;
+    background-image: linear-gradient(to bottom right, #1d80b5, #e3f5ff);
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 2px 2px 5px black;
+    height: 150px;
+}
