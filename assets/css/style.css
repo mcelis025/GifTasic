@@ -1,7 +1,29 @@
 .jumbotron {
-    font-size: 90px;
-    background-image: linear-gradient(to bottom right, #1d80b5, #e3f5ff);
+    background-image: linear-gradient(to bottom right, #1d80b5, #175a85);
     font-family: 'Indie Flower', cursive;
     text-shadow: 2px 2px 5px black;
     height: 150px;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+.buttons {
+    background-image: linear-gradient(to bottom right, #1d80b5, #175a85);
+    font-family: cursive;
+}
+
+#addGif {
+    background-image: linear-gradient(to bottom right, #175a85, #1d80b5);
+}
+
+#search {
+    text-shadow: 1px 1px 1px black;
+}
+
+.rating {
+    text-shadow: 1px 1px 1px black;
+    font-variant: small-caps;
+    white-space: pre-line; 
 }

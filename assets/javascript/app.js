@@ -1,4 +1,4 @@
-var gifs = ["tiger king", "ronaldo", "hello", "bye"];
+var topics = ["tiger king", "ronaldo", "hello", "bye"];
 
 $(document).on("click", ".gifImg", function () {
 
@@ -12,19 +12,21 @@ $(document).on("click", ".gifImg", function () {
         console.log(response);
 
         var results = response.data;
-
+       
         for (var i = 0; i < results.length; i++) {
 
             var gifDiv = $("<div>");
             var p = $("<p>");
-            $(p).text("Rating: " + results[i].rating);
+            $(p).html("<br>Rating: " + results[i].rating);
+            $(p).addClass("lead rating")
             var gifImage = $("<img>");
             $(gifImage).attr("src", results[i].images.fixed_height_still.url);
 
             $(gifImage).attr('data-still', results[i].images.fixed_height_still.url);
             $(gifImage).attr('data-animate', results[i].images.fixed_height.url);
             $(gifImage).attr('data-state', "still");
-            $(gifImage).addClass("gif");
+            
+            $(gifImage).addClass("gif shadow");
 
 
             $(gifDiv).append(p, gifImage);
@@ -36,11 +38,11 @@ $(document).on("click", ".gifImg", function () {
 function renderButtons() {
 
     $("#buttons-view").empty();
-    for (var i = 0; i < gifs.length; i++) {
+    for (var i = 0; i < topics.length; i++) {
         var a = $("<button>");
-        a.addClass("gifImg");
-        a.attr("data-name", gifs[i]);
-        a.text(gifs[i]);
+        a.addClass("gifImg btn btn-outline-light shadow buttons");
+        a.attr("data-name", topics[i]);
+        a.text(topics[i]);
         $("#buttons-view").append(a);
     }
 }
@@ -48,7 +50,7 @@ function renderButtons() {
 $("#addGif").on("click", function (event) {
     event.preventDefault();
     var gifImg = $("#gifInput").val().trim();
-    gifs.push(gifImg);
+    topics.push(gifImg);
 
     renderButtons();
 });
